@@ -173,8 +173,10 @@ update dbo.combined_file
 set end_lat = 1000, end_lng = 1000
 where end_lat is null and end_lat is null
 ```
-Basic structure of function
+The basic structure of function:
+
 <img width="362" alt="sa2" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/d8bcdced-7007-46a5-bb54-afbae751bfd3">
+
 Now let's find the distance between coordinates by creating a function 
 and using the haversine formula.
 
@@ -214,6 +216,18 @@ add distMi float
 ```sql
 update dbo.[combined_file]
 set distMi = dbo.caldist(start_lat, start_lng, end_lat, end_lng)
+```
+Follow the same process for combined_file_2 also and then combine combined_file and combined_file_2 using below code.
+
+```sql
+use Cyclists
+select * into Final_Table
+from
+(
+select * from dbo.combined_file
+union all
+select * from dbo.combined_file_2
+) as combined_data;
 ```
 
 
