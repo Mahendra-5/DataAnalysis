@@ -173,9 +173,11 @@ update dbo.combined_file
 set end_lat = 1000, end_lng = 1000
 where end_lat is null and end_lat is null
 ```
+Basic structure of function
+<img width="362" alt="sa2" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/d8bcdced-7007-46a5-bb54-afbae751bfd3">
 Now let's find the distance between coordinates by creating a function 
 and using the haversine formula.
-<img width="362" alt="sa2" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/d8bcdced-7007-46a5-bb54-afbae751bfd3">
+
 ```sql
 CREATE FUNCTION dbo.caldist (@lat1 as FLOAT,@lon1 as FLOAT,@lat2 as FLOAT,@lon2 as FLOAT)
 RETURNS FLOAT
