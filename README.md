@@ -9,7 +9,7 @@
 - **Analytical team:** Responsible for collecting, analyzing, and reporting data.
 - **Executive team:** Decide whether to approve the marketing program.
 
-**Business task:** Building general awareness about whether the company is more profitable or converting casual riders to members is more profitable?
+**Business task:** Building general awareness about whether the company is more profitable or converting casual riders to members is more profitable.
 **My task:** How do annual members and casual riders use Cyclistic’s bikes differently?
 
 ### PREPARE PHASE
@@ -175,6 +175,7 @@ where end_lat is null and end_lat is null
 ```
 Now let's find the distance between coordinates by creating a function 
 and using the haversine formula.
+<img width="362" alt="sa2" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/d8bcdced-7007-46a5-bb54-afbae751bfd3">
 ```sql
 CREATE FUNCTION dbo.caldist (@lat1 as FLOAT,@lon1 as FLOAT,@lat2 as FLOAT,@lon2 as FLOAT)
 RETURNS FLOAT
