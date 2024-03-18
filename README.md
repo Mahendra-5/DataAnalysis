@@ -229,10 +229,54 @@ union all
 select * from dbo.combined_file_2
 ) as combined_data;
 ```
+## Analysis Phase
 
+In the analyze phase, we delve into the data and prepare insights for visualization on the PowerBI dashboard.
 
+### Columns Overview
 
+- **ride_id**: Transaction ID, unique values, can be ignored.
+- **rideable_type**: Type of bike used by members and casuals.
+- **started_at** and **ended_at**: Useful for designing line graphs to depict usage over time.
+- **start_station_name**: Helps visualize popular stations through bar charts.
+- **start_lat**, **start_lng**, **end_lat**, **end_lng**: Utilized for calculating distances and mapping stations.
+- **member_casual**: A key legend in various PowerBI charts.
+- **DayDiff**: Duration of bike usage in days.
+- **HrDiff**: Duration of bike usage in hours, minutes, and seconds.
+- **distMi**: Average distance between stations in miles.
 
+To enhance analysis, rows with zero values in `end_lat` and `end_lng` were removed to prevent null values in the `distMi` column.
+
+```SQL
+delete from dbo.Final_Table
+where end_lat = 0 and
+(end_lng =0 or end_lng = 1000)
+```
+**Popular Station**:
+  ```sql
+  SELECT TOP 10 end_station_name, COUNT(*) AS popular_station
+  FROM dbo.Final_Table
+  GROUP BY end_station_name
+  ORDER BY popular_station DESC
+```sql
+
+**Average Distance between stations (in miles)**:
+```sql
+select
+AVG(case when distMi < 8000 and distMi != 0 then distMi else null end) as avgdistMi
+from dbo.Final_Table
+```
+### SHARE PHASE
+In the share phase, I used PowerBI for the visualization. I used DAX to create a new column using the started_at to know which day and hour of the day has the highest frequency of members and casuals.
+
+These are the Dax codes I used
+```
+DayOfWeek = FORMAT('Final_Table'[started_at], "dddd")
+```
+```
+HourOfDay = HOUR('Final_Table'[started_at])
+```
+<img width="887" alt="powerbi_dashboard" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/c375ec4c-eba0-4dd6-bc1c-2b82da34ba7e">
 
 
 
