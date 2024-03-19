@@ -154,7 +154,7 @@ are all zeroes. Therefore that data is not important because the rider did not u
 select * from dbo.[combined_file]
 where DayDiff = 0 and HrDiff = 0 and MinDiff = 0 and SecDiff =0
 ```
-We need to delete the rows where HoursDifference, MinutesDifference and SecondsDifference are all zeroes
+We need to delete the rows where HoursDifference, MinutesDifference, and SecondsDifference are all zeroes
 because there is no use where the rider did not even use the bicycle for even 1 minute.
 
 ```sql
@@ -173,7 +173,7 @@ update dbo.combined_file
 set end_lat = 1000, end_lng = 1000
 where end_lat is null and end_lat is null
 ```
-The basic structure of function:
+The basic structure of the function:
 
 <img width="362" alt="sa2" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/d8bcdced-7007-46a5-bb54-afbae751bfd3">
 
@@ -231,7 +231,7 @@ select * from dbo.combined_file_2
 ```
 ## Analysis Phase
 
-In the analyze phase, we delve into the data and prepare insights for visualization on the PowerBI dashboard.
+In the analysis phase, we delve into the data and prepare insights for visualization on the PowerBI dashboard.
 
 ### Columns Overview
 
@@ -267,7 +267,7 @@ AVG(case when distMi < 8000 and distMi != 0 then distMi else null end) as avgdis
 from dbo.Final_Table
 ```
 ### SHARE PHASE
-In the share phase, I used PowerBI for the visualization. I used DAX to create a new column using the started_at to know which day and hour of the day has the highest frequency of members and casuals.
+In the sharing phase, I used PowerBI for the visualization. I used DAX to create a new column using the started_at to know which day and hour of the day has the highest frequency of members and casuals.
 
 These are the Dax codes I used
 ```
@@ -278,6 +278,10 @@ HourOfDay = HOUR('Final_Table'[started_at])
 ```
 <img width="887" alt="powerbi_dashboard" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/c375ec4c-eba0-4dd6-bc1c-2b82da34ba7e">
 
+
+
+Note: The line chart has a dynamic x-axis where you can change the axis’s options.
+link to access the visualization- [click here](https://1drv.ms/u/s!Am8npFYZzEjpiQW8KpNBmlg_TiO3?e=8zT95g)
 
 
 
