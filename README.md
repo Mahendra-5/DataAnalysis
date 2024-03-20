@@ -281,7 +281,7 @@ HourOfDay = HOUR('Final_Table'[started_at])
 
 
 Note: The line chart has a dynamic x-axis where you can change the axis’s options.
-link to access the visualization- [click here]([https://1drv.ms/u/s!Am8npFYZzEjpiQW8KpNBmlg_TiO3?e=8zT95g](https://app.powerbi.com/view?r=eyJrIjoiZmQ2N2FjY2ItODc0Zi00ZDM5LTkwOWEtMTI2MWQ4MzZjMWRjIiwidCI6IjAxYzQxYTE5LTU4NTItNDg5Yi1iNjMwLTA2Y2YxYmJiNDlmMCIsImMiOjN9)https://app.powerbi.com/view?r=eyJrIjoiZmQ2N2FjY2ItODc0Zi00ZDM5LTkwOWEtMTI2MWQ4MzZjMWRjIiwidCI6IjAxYzQxYTE5LTU4NTItNDg5Yi1iNjMwLTA2Y2YxYmJiNDlmMCIsImMiOjN9)
+link to access the visualization- [click here](https://1drv.ms/u/s!Am8npFYZzEjpiQW8KpNBmlg_TiO3?e=8zT95g](https://app.powerbi.com/view?r=eyJrIjoiZmQ2N2FjY2ItODc0Zi00ZDM5LTkwOWEtMTI2MWQ4MzZjMWRjIiwidCI6IjAxYzQxYTE5LTU4NTItNDg5Yi1iNjMwLTA2Y2YxYmJiNDlmMCIsImMiOjN9)https://app.powerbi.com/view?r=eyJrIjoiZmQ2N2FjY2ItODc0Zi00ZDM5LTkwOWEtMTI2MWQ4MzZjMWRjIiwidCI6IjAxYzQxYTE5LTU4NTItNDg5Yi1iNjMwLTA2Y2YxYmJiNDlmMCIsImMiOjN9)
 
 
 
