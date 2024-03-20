@@ -9,7 +9,7 @@
 - **Analytical team:** Responsible for collecting, analyzing, and reporting data.
 - **Executive team:** Decide whether to approve the marketing program.
 
-**Business task:** Building general awareness about whether the company is more profitable or converting casual riders to members is more profitable.
+**Business task:** Whether building general awareness about the company is more profitable or converting casual riders to members is more profitable.
 **My task:** How do annual members and casual riders use Cyclistic’s bikes differently?
 
 ### PREPARE PHASE
