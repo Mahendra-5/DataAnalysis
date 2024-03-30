@@ -276,7 +276,7 @@ DayOfWeek = FORMAT('Final_Table'[started_at], "dddd")
 ```
 HourOfDay = HOUR('Final_Table'[started_at])
 ```
-<img width="887" alt="powerbi_dashboard" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/c375ec4c-eba0-4dd6-bc1c-2b82da34ba7e">
+<img width="891" alt="Screenshot 2024-03-30 153313" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/a1e126e8-e580-4ce5-bb34-eec60f3dad0e">
 
 
 
