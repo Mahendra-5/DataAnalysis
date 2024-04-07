@@ -276,7 +276,8 @@ DayOfWeek = FORMAT('Final_Table'[started_at], "dddd")
 ```
 HourOfDay = HOUR('Final_Table'[started_at])
 ```
-<img width="891" alt="Screenshot 2024-03-30 153313" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/a1e126e8-e580-4ce5-bb34-eec60f3dad0e">
+<img width="895" alt="khugtd" src="https://github.com/Mahendra-5/DataAnalysis/assets/160994768/add7390f-92ef-4a1d-a169-fc825750d036">
+
 
 
 
